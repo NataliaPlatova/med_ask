@@ -12,7 +12,7 @@ class Tabs extends React.Component{
         this.toggle = this.toggle.bind(this);
     }
 
-    toggle(e){
+    toggle(){
         this.setState({
             active1: !this.state.active1,
             active2: !this.state.active2
@@ -29,16 +29,6 @@ class Tabs extends React.Component{
                          value="ДМС" onClick={this.toggle}>ДМС</div>
                 </div>
             </div>
-            /*--<form>
-                <div>
-                    <input type="radio" id="contactChoice1"
-                           name="contact" value="ОМС" defaultChecked/>
-                        <label htmlFor="contactChoice1">ОМС</label>
-                        <input type="radio" id="contactChoice2"
-                               name="contact" value="ДМС" />
-                            <label htmlFor="contactChoice2">ДМС</label>
-                </div>
-            </form>--*/
 
         )
     }

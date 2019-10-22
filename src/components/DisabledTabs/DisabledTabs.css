@@ -1,0 +1,40 @@
+.row-for-tabs {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 72px;
+    margin-bottom: 56px;
+    width: 100%;
+}
+
+.tabs {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.disabledTab {
+    width: 124px;
+    height: 42px;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+    color: #626262;
+}
+
+#left-tab {
+    border-radius: 5px 0 0 5px;
+}
+
+#right-tab {
+    border-radius: 0 5px 5px 0;
+}
+
+.active {
+    background: #ED462F;
+    border: 1px solid #ED462F;
+    color: #FFFFFF;
+}

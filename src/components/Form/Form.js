@@ -4,7 +4,7 @@ import './Form.css';
 import InsuranceNumber from "../InsuranceNumber/InsuranceNumber";
 import InsuranceCompanySelector from "../InsuranceCompanySelector/InsuranceCompanySelector";
 import ServiceSelector from "../ServiceSelector/ServiceSelector";
-import Tabs from "../Tabs/Tabs";
+import TabsContainer from "../TabsContainer/TabsContainer";
 
 class Form extends React.Component{
     constructor(props){
@@ -26,7 +26,7 @@ class Form extends React.Component{
     render() {
         return(
             <div>
-                <Tabs />
+                <TabsContainer insuranceType={this.state.insuranceType}/>
                 <div className="row-for-selectors">
                     <InsuranceNumber onChange={this.changeInsState} />
                     <InsuranceCompanySelector companyName={this.state.companyName}/>
