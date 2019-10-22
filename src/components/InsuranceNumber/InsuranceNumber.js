@@ -1,20 +1,31 @@
 import React from 'react';
 
 import './InsuranceNumber.css';
+import data from "../../insurances";
 
 class InsuranceNumber extends React.Component{
     constructor(props) {
         super(props);
-        this.handleChange = this.handleChange.bind(this);
+        this.checkNewNumber = this.checkNewNumber.bind(this);
     }
 
-    handleChange(e) {
-        const newInsNumber = e.target.value;
-        this.props.onChange(newInsNumber);
+    checkNewNumber(e) {
+            const newInsNumber = e.target.value;
+            let newCompanyName = '';
+            let newInsuranceType = '';
+            for (let item = 0; item < 6; item++) {
+                if (data[item]['sp'] === newInsNumber.toString()) {
+                    newCompanyName = data[item]['sk'];
+                    newInsuranceType = data[item]['ts'];
+                    break;
+                }
+            };
+            this.props.onChange(newCompanyName, newInsuranceType);
     }
+
     render() {
         return(
-            <input className="round" placeholder="Введите номер полиса" onChange={this.handleChange}/>
+            <input className="round" placeholder="Введите номер полиса" onChange={this.checkNewNumber}/>
         )
     }
 }

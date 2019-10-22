@@ -13,22 +13,22 @@ class Form extends React.Component{
             companyName: '',
             insuranceType: ''
         };
-        this.changeCompanyName = this.changeCompanyName.bind(this);
+        this.changeInsState = this.changeInsState.bind(this);
     }
 
-    changeCompanyName(newInsNumber) {
+    changeInsState(newName, newType) {
         this.setState({
-            companyName: newInsNumber,
-            insuranceType: 'ДМС'
-        })
+            companyName: newName,
+            insuranceType: newType
+        });
     }
 
     render() {
         return(
             <div>
-                <Tabs/>
+                <Tabs />
                 <div className="row-for-selectors">
-                    <InsuranceNumber onChange={this.changeCompanyName} />
+                    <InsuranceNumber onChange={this.changeInsState} />
                     <InsuranceCompanySelector companyName={this.state.companyName}/>
                 </div>
                 <ServiceSelector />

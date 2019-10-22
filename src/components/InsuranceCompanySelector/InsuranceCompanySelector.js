@@ -6,11 +6,11 @@ class InsuranceCompanySelector extends React.Component{
     render() {
         return(
             <select className="without-js" size="1" name="company" ref='nameSelector'
-                    value={this.props.companyName ? 'fuck' : 'select'} readOnly>
+                    value={this.props.companyName ? this.props.companyName : 'select'} readOnly>
                 <option value='select'>Выбрать</option>
-                <option value="СК-Рандеву">СК-Рандеву</option>
-                <option value="СК МедАскер">СК МедАскер</option>
-                <option value="fuck">Страх Трах</option>
+                <option value="СК Рандеву">СК Рандеву</option>
+                <option value="СК МЕД-АСКЕР">СК МЕД-АСКЕР</option>
+                <option value="Страх-Трах">Страх-Трах</option>
             </select>
         )
     }
