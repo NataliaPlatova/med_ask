@@ -1,0 +1,12 @@
+.without-js {
+    width: 50%;
+    height: 35px;
+    background: #FFFFFF;
+    border: 1px solid #868686;
+    box-sizing: border-box;
+    border-radius: 50px;
+    padding: 8px 24px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #868686;
+}
