@@ -20,6 +20,7 @@ class InsuranceNumber extends React.Component{
                     break;
                 }
             };
+            console.log(this);
             this.props.onChange(newCompanyName, newInsuranceType);
     }
 

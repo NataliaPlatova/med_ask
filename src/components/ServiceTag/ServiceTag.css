@@ -1,0 +1,14 @@
+.chosen-service {
+    display: inline-flex;
+    align-items: center;
+}
+
+.chosen-service-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.cancel {
+    margin: 4px 8px;
+}

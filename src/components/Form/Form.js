@@ -3,8 +3,8 @@ import React from 'react';
 import './Form.css';
 import InsuranceNumber from "../InsuranceNumber/InsuranceNumber";
 import InsuranceCompanySelector from "../InsuranceCompanySelector/InsuranceCompanySelector";
-import ServiceSelector from "../ServiceSelector/ServiceSelector";
 import TabsContainer from "../TabsContainer/TabsContainer";
+import ServicesContainer from "../ServicesContainer/ServicesContainer";
 
 class Form extends React.Component{
     constructor(props){
@@ -31,7 +31,7 @@ class Form extends React.Component{
                     <InsuranceNumber onChange={this.changeInsState} />
                     <InsuranceCompanySelector companyName={this.state.companyName}/>
                 </div>
-                <ServiceSelector />
+                <ServicesContainer/>
             </div>
         )
     }
