@@ -19,7 +19,7 @@ class ServicesContainer extends React.Component {
         return (
             <div>
                 <ServiceSelector onChange={this.getTagList}/>
-                <ChosenServices tagList={this.state.tagList}/>
+                <ChosenServices tagList={this.state.tagList} onChange={this.getTagList}/>
             </div>
         );
     }

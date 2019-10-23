@@ -1,6 +1,8 @@
 .chosen-service {
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    width: 50%;
 }
 
 .chosen-service-text {
@@ -11,4 +13,9 @@
 
 .cancel {
     margin: 4px 8px;
+}
+
+.cancel:hover {
+    opacity: 50%;
+    cursor: pointer;
 }
