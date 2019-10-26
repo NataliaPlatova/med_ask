@@ -1,0 +1,12 @@
+.chosen-service {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+}
+
+.chosen-service-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+}

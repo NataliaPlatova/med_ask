@@ -1,0 +1,30 @@
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.check {
+    width: 165px;
+    height: 38px;
+    border: 1px solid #ED462F;
+    box-sizing: border-box;
+    border-radius: 50px;
+    background-color: #ED462F;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+button:disabled {
+    width: 165px;
+    height: 38px;
+    border: 1px solid #ED462F;
+    box-sizing: border-box;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+    font-size: 18px;
+    line-height: 25px;
+    color: #ED462F;
+    cursor: auto;
+}

@@ -5,21 +5,19 @@ import ChosenServices from "../ChosenServices/ChosenServices";
 class ServicesContainer extends React.Component {
     constructor(props){
         super(props);
-        this.state={tagList: []};
-        this.getTagList = this.getTagList.bind(this);
+        this.onChangeList = this.onChangeList.bind(this);
     }
 
-    getTagList(newList) {
-        this.setState({
-            tagList: newList
-        });
+    onChangeList(newList){
+        this.props.onChange(newList);
     }
 
     render() {
         return (
             <div>
-                <ServiceSelector onChange={this.getTagList}/>
-                <ChosenServices tagList={this.state.tagList} onChange={this.getTagList}/>
+                <ServiceSelector services={this.props.services} onChange={this.onChangeList}/>
+                <ChosenServices tagList={this.props.tagList} checkedTagList={this.props.checkedTagList}
+                                onChange={this.onChangeList}/>
             </div>
         );
     }

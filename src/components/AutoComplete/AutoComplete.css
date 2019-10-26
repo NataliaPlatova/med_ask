@@ -1,16 +1,3 @@
-.service-selector {
-    margin-top: 56px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-label {
-    margin-bottom: 20px;
-    margin-left: 16px;
-    text-align: left;
-}
-
 .AutoCompleteText {
     width: 100%;
     border: 1px solid #868686;
@@ -39,4 +26,3 @@ label {
     padding: 8px 24px;
     cursor: pointer;
 }
-
