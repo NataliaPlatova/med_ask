@@ -31,12 +31,11 @@ class ChosenServices extends React.Component{
         const checkedServices =(
             <div className="chosen">
                 {this.props.checkedTagList.map(list => {
-                    list.map(checkedService =>{
-                        return(
-                            <CheckedServiceTag checkedService={checkedService} image={list} />
-                        );
-                    })
-                })}
+                    return (
+                        <CheckedServiceTag listNumber={this.props.checkedTagList.indexOf(list)} list={list}/>
+                    )
+                })
+                }
             </div>
         );
 
@@ -61,4 +60,11 @@ export default ChosenServices;
 //      )}
 //  </div>
 // )
+
+//return(
+  //  <CheckedServiceTag checkedService={checkedService} imageNumber={this.props.checkedTagList.indexOf(list)} />
+//);
+
+
+
 

@@ -23,7 +23,6 @@ class CheckButton extends React.Component {
             }
         };
         let newCheckedList = [included, unIncluded, notFound];
-        console.log(newCheckedList);
         this.props.onClick(newCheckedList);
     }
 

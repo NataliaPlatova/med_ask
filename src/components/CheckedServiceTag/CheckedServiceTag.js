@@ -3,11 +3,30 @@ import React from 'react';
 import './CheckedServiceTag.css';
 
 class CheckedServiceTag extends React.Component {
+    constructor(props){
+        super(props);
+    }
+
     render() {
+        let includeIcon;
+        if (this.props.listNumber===0) {
+            includeIcon = (<img src={require("../../images/include.png")}/>);
+        } else if (this.props.listNumber===1) {
+            includeIcon = (<img src={require("../../images/uninclude.png")}/>);
+        } else if (this.props.listNumber===2) {
+            includeIcon = (<img src={require("../../images/notFound.png")}/>);
+        }
+
         return(
-            <div className="chosen-service">
-                <img src={require("../../images/cancel.png")} className="cancel" onClick={this.deleteTag}/>
-                <p className="chosen-service-text">{this.props.checkedService}</p>
+            <div>
+                {this.props.list.map(checkedService =>{
+                return (
+                    <div className="chosen-service">
+                        <span>{includeIcon}</span>
+                        <p className="chosen-service-text">{checkedService}</p>
+                    </div>
+                )
+                })}
             </div>
         );
     }
