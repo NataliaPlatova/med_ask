@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/med_ask/static/css/main.e5d61984.chunk.css",
-    "main.js": "/med_ask/static/js/main.7e7fba8d.chunk.js",
-    "main.js.map": "/med_ask/static/js/main.7e7fba8d.chunk.js.map",
+    "main.js": "/med_ask/static/js/main.28a48f94.chunk.js",
+    "main.js.map": "/med_ask/static/js/main.28a48f94.chunk.js.map",
     "runtime-main.js": "/med_ask/static/js/runtime-main.f7e6811c.js",
     "runtime-main.js.map": "/med_ask/static/js/runtime-main.f7e6811c.js.map",
     "static/js/2.87e6b1ed.chunk.js": "/med_ask/static/js/2.87e6b1ed.chunk.js",
     "static/js/2.87e6b1ed.chunk.js.map": "/med_ask/static/js/2.87e6b1ed.chunk.js.map",
     "index.html": "/med_ask/index.html",
-    "precache-manifest.4426f2b5585eaeb84cb593308952e0a0.js": "/med_ask/precache-manifest.4426f2b5585eaeb84cb593308952e0a0.js",
+    "precache-manifest.754afa8b3e113b8ab90873531b03e1f9.js": "/med_ask/precache-manifest.754afa8b3e113b8ab90873531b03e1f9.js",
     "service-worker.js": "/med_ask/service-worker.js",
     "static/css/main.e5d61984.chunk.css.map": "/med_ask/static/css/main.e5d61984.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.f7e6811c.js",
     "static/js/2.87e6b1ed.chunk.js",
     "static/css/main.e5d61984.chunk.css",
-    "static/js/main.7e7fba8d.chunk.js"
+    "static/js/main.28a48f94.chunk.js"
   ]
 }
