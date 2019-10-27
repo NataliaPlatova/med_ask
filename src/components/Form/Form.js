@@ -13,6 +13,7 @@ class Form extends React.Component{
     constructor(props){
         super(props);
         this.state={
+            insuranceNumber: '',
             companyName: '',
             insuranceType: '',
             tagList: [],
@@ -23,8 +24,9 @@ class Form extends React.Component{
         this.makeCheckedList=this.makeCheckedList.bind(this);
     }
 
-    changeInsState(newName, newType) {
+    changeInsState(newNumber, newName, newType) {
         this.setState({
+            insuranceNumber: newNumber,
             companyName: newName,
             insuranceType: newType
         });
@@ -43,7 +45,8 @@ class Form extends React.Component{
     }
 
     render() {
-        const checkButton = (<CheckButton tagList={this.state.tagList} services={data}
+        const checkButton = (<CheckButton tagList={this.state.tagList} services={data} companyName={this.state.companyName}
+                                          insuranceNumber={this.state.insuranceNumber}
                                           checkedTagList={this.state.checkedTagList} onClick={this.makeCheckedList}/>);
         const newInquiryButton = (<NewInquiryButton checkedTagList={this.state.checkedTagList}
                                                     clearTagsList={this.getTagList} clearCheckedList={this.makeCheckedList}

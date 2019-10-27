@@ -1,11 +1,18 @@
-.chosen-service {
+.checked-service-tag {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checked-service {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 50%;
+    width: 100%;
 }
 
-.chosen-service-text {
+.checked-service p {
     font-size: 14px;
     line-height: 24px;
     color: #000000;
@@ -14,6 +21,7 @@
 .image {
     width: 18px;
     height: 18px;
+    margin-right: 8px;
 }
 
 .image img{

@@ -21,12 +21,12 @@ class InsuranceNumber extends React.Component{
                 }
             };
             console.log(this);
-            this.props.onChange(newCompanyName, newInsuranceType);
+            this.props.onChange(newInsNumber, newCompanyName, newInsuranceType);
     }
 
     render() {
         return(
-            <input className="round" placeholder="Введите номер полиса" onChange={this.checkNewNumber}/>
+            <input type="text" className="round" placeholder="Введите номер полиса" onChange={this.checkNewNumber}/>
         )
     }
 }

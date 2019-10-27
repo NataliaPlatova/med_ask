@@ -18,12 +18,12 @@ class CheckedServiceTag extends React.Component {
         }
 
         return(
-            <div>
+            <div className="checked-service-tag">
                 {this.props.list.map(checkedService =>{
                 return (
-                    <div className="chosen-service">
+                    <div className="checked-service">
                         <span className='image'>{includeIcon}</span>
-                        <p className="chosen-service-text">{checkedService}</p>
+                        <p>{checkedService}</p>
                     </div>
                 )
                 })}

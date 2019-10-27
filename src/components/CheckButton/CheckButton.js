@@ -7,6 +7,7 @@ class CheckButton extends React.Component {
         super(props);
         this.checkTags=this.checkTags.bind(this);
     }
+
     checkTags() {
         let included = [];
         let unIncluded = [];
@@ -20,6 +21,8 @@ class CheckButton extends React.Component {
                 included.push(checkingItem);
             } else if (availableServices[checkingItem]===false) {
                 unIncluded.push(checkingItem);
+            } else {
+                notFound.push(checkingItem);
             }
         };
         let newCheckedList = [included, unIncluded, notFound];
@@ -29,7 +32,8 @@ class CheckButton extends React.Component {
     render() {
         return(
             <div className="button">
-                <button className="check" onClick={this.checkTags}>Проверить</button>
+                <button disabled={((this.props.tagList.length!=0)&(this.props.companyName!='')&(this.props.insuranceNumber!='')) ? false : true} className="check"
+                        onClick={this.checkTags}>Проверить</button>
             </div>
         );
     }

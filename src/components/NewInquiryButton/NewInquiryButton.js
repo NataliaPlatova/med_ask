@@ -25,9 +25,10 @@ class NewInquiryButton extends React.Component {
     }
 
     clearInsuranсes() {
+        const newInsuranceNumber = '';
         const newCompanyName = '';
         const newInsuranceType = '';
-        this.props.clearInsurances(newCompanyName, newInsuranceType);
+        this.props.clearInsurances(newInsuranceNumber, newCompanyName, newInsuranceType);
     }
 
     render() {

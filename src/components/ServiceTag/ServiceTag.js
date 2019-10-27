@@ -16,7 +16,7 @@ class ServiceTag extends React.Component {
     render() {
         return (
             <div className="chosen-service">
-                <p className="chosen-service-text">{this.props.tag}</p>
+                <p>{this.props.tag}</p>
                 <img src={require("../../images/cancel.png")} className="cancel" onClick={this.deleteTag}/>
             </div>
         )
