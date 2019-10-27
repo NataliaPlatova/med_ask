@@ -42,14 +42,14 @@ class Form extends React.Component{
         this.setState({
             checkedTagList: newCheckedList
         });
+
     }
 
     render() {
         const checkButton = (<CheckButton tagList={this.state.tagList} services={data} companyName={this.state.companyName}
                                           insuranceNumber={this.state.insuranceNumber}
                                           checkedTagList={this.state.checkedTagList} onClick={this.makeCheckedList}/>);
-        const newInquiryButton = (<NewInquiryButton checkedTagList={this.state.checkedTagList}
-                                                    clearTagsList={this.getTagList} clearCheckedList={this.makeCheckedList}
+        const newInquiryButton = (<NewInquiryButton clearTagList={this.getTagList} clearCheckedList={this.makeCheckedList}
                                                     clearInsurances={this.changeInsState}/>)
         return(
             <div className='card-content'>

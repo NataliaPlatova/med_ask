@@ -9,26 +9,14 @@ class NewInquiryButton extends React.Component {
     }
 
     makeNewInquiry() {
-        this.clearTagsList();
-        this.clearCheckedTagsList();
-        this.clearInsuranсes();
-    }
-
-    clearTagsList() {
-        const newList = [];
-        this.props.clearTagsList(newList);
-    }
-
-    clearCheckedTagsList() {
-        const newCheckedList = [];
-        this.props.clearCheckedList(newCheckedList);
-    }
-
-    clearInsuranсes() {
         const newInsuranceNumber = '';
         const newCompanyName = '';
         const newInsuranceType = '';
+        const newTagList = [];
+        const newCheckedList = [];
         this.props.clearInsurances(newInsuranceNumber, newCompanyName, newInsuranceType);
+        this.props.clearTagList(newTagList);
+        this.props.clearCheckedList(newCheckedList);
     }
 
     render() {

@@ -15,7 +15,8 @@ class ServicesContainer extends React.Component {
     render() {
         return (
             <div>
-                <ServiceSelector services={this.props.services} onChange={this.onChangeList}/>
+                <ServiceSelector services={this.props.services} onChange={this.onChangeList}
+                                 tagList={this.props.tagList}/>
                 <ChosenServices tagList={this.props.tagList} checkedTagList={this.props.checkedTagList}
                                 onChange={this.onChangeList}/>
             </div>

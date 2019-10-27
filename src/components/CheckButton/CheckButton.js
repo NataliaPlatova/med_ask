@@ -32,7 +32,7 @@ class CheckButton extends React.Component {
     render() {
         return(
             <div className="button">
-                <button disabled={((this.props.tagList.length!=0)&(this.props.companyName!='')&(this.props.insuranceNumber!='')) ? false : true} className="check"
+                <button disabled={((this.props.tagList.length!==0)&(this.props.companyName!=='')&(this.props.insuranceNumber!=='')) ? false : true} className="check"
                         onClick={this.checkTags}>Проверить</button>
             </div>
         );

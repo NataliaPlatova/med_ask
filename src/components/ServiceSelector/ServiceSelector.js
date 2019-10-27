@@ -2,7 +2,6 @@ import React from 'react';
 
 import './ServiceSelector.css';
 
-let newList=[];
 
 class ServiceSelector extends React.Component{
     constructor(props){
@@ -58,6 +57,7 @@ class ServiceSelector extends React.Component{
     }
 
     addTag(service) {
+        let newList = this.props.tagList;
             newList.push(service);
             this.props.onChange(newList);
         this.setState(() => ({
