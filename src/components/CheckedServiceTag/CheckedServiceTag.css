@@ -10,3 +10,13 @@
     line-height: 24px;
     color: #000000;
 }
+
+.image {
+    width: 18px;
+    height: 18px;
+}
+
+.image img{
+    width: 18px;
+    height: 18px;
+}

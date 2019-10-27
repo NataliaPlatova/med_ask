@@ -7,6 +7,7 @@ import TabsContainer from "../TabsContainer/TabsContainer";
 import ServicesContainer from "../ServicesContainer/ServicesContainer";
 import CheckButton from "../CheckButton/CheckButton";
 import data from '../../services.json';
+import NewInquiryButton from "../NewInquiryButton/NewInquiryButton";
 
 class Form extends React.Component{
     constructor(props){
@@ -42,17 +43,23 @@ class Form extends React.Component{
     }
 
     render() {
+        const checkButton = (<CheckButton tagList={this.state.tagList} services={data}
+                                          checkedTagList={this.state.checkedTagList} onClick={this.makeCheckedList}/>);
+        const newInquiryButton = (<NewInquiryButton checkedTagList={this.state.checkedTagList}
+                                                    clearTagsList={this.getTagList} clearCheckedList={this.makeCheckedList}
+                                                    clearInsurances={this.changeInsState}/>)
         return(
-            <div>
-                <TabsContainer insuranceType={this.state.insuranceType}/>
-                <div className="row-for-selectors">
-                    <InsuranceNumber onChange={this.changeInsState} />
-                    <InsuranceCompanySelector companyName={this.state.companyName}/>
+            <div className='card-content'>
+                <div>
+                    <TabsContainer insuranceType={this.state.insuranceType}/>
+                    <div className="row-for-selectors">
+                        <InsuranceNumber onChange={this.changeInsState} />
+                        <InsuranceCompanySelector companyName={this.state.companyName}/>
+                    </div>
+                    <ServicesContainer tagList={this.state.tagList} checkedTagList={this.state.checkedTagList} services={data}
+                                       onChange={this.getTagList}/>
                 </div>
-                <ServicesContainer tagList={this.state.tagList} checkedTagList={this.state.checkedTagList} services={data}
-                                   onChange={this.getTagList}/>
-                <CheckButton tagList={this.state.tagList} services={data} checkedTagList={this.state.checkedTagList}
-                             onClick={this.makeCheckedList}/>
+                {(this.state.checkedTagList.length===0) ? checkButton : newInquiryButton}
             </div>
         )
     }

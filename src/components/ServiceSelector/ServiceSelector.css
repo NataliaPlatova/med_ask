@@ -25,14 +25,14 @@ label {
     box-sizing: border-box;
     outline: none;
     height: 35px;
-    background-color: rgba(0 0 0 0);
+    background-color: rgba(255, 255, 255, 0.0);
 }
 
 .AutoCompleteText ul {
     list-style-type: none;
     text-align: left;
     margin: 0;
-    padding: 0;
+    padding: 0 0 8px 0;
 }
 
 .AutoCompleteText li {

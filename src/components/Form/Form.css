@@ -1,5 +1,16 @@
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 57px 72px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .row-for-selectors {
     display: inline-flex;
     justify-content: space-between;
     width: 100%;
 }
+
